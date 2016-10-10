@@ -12,12 +12,11 @@ extras1 << Cream.new(700)
 
 extras2 << WholeMilk.new(400)
 extras2 << ExtraChocolate.new(1000)
-extras2 << IceCream.new(500)
 
 extras3 << ExtraChocolate.new(1000)
 extras3 << LowFatMilk.new(400)
 extras3 << Cream.new(700)
 
-first_drink = Tea.new(2000, 5, extras1, Tea.new(1700, 7, extras2, Tea.new(1800, 4, extras3)))
+first_drink = Frappuccino.new(1000, 5, extras1, Chocolate.new(1000, 5, extras2, Cappuccino.new(1000, 5, extras3)))
 
 first_drink.prepare(order)

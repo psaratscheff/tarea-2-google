@@ -1,3 +1,4 @@
+require 'byebug'
 class Order
   attr_accessor :time
   attr_accessor :time_multiplier
@@ -119,14 +120,14 @@ class Espresso < Drink
 end
 
 class Cappuccino < Drink
-  def add_extras(order)
+  def prepare(order)
     @price += 100 * @extras.count
     super
   end
 end
 
 class Frappuccino < Drink
-  def add_extras(order)
+  def prepare(order)
     @price *= 1 + @extras.count * 0.05
     super
   end
